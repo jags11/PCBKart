@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @useraddress.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @useraddress.city %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @useraddress.pincode %>
+</p>
+
+<%= link_to 'Edit', edit_useraddress_path(@useraddress) %> |
+<%= link_to 'Back', useraddresses_path %>

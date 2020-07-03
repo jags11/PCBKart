@@ -1,0 +1,29 @@
+<%= form_for(@layerthickness) do |f| %>
+  <%# if @layerthickness.errors.any? %>
+<!--    <div id="error_explanation">-->
+<!--      <h2><%#= pluralize(@layerthickness.errors.count, "error") %> prohibited this layerthickness from being saved:</h2>-->
+
+<!--      <ul>-->
+      <%# @layerthickness.errors.full_messages.each do |message| %>
+<!--        <li><%#= message %></li>-->
+      <%# end %>
+<!--      </ul>-->
+<!--    </div>-->
+  <%# end %>
+
+  <div class="field">
+    <%= f.label :thickness %><br>
+    <%= f.text_field :thickness %>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <%= f.collection_select :layer_id, Layer.all, :id, :layercount%>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

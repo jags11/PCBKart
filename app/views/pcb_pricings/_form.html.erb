@@ -1,0 +1,26 @@
+<%= form_for(@pcb_pricing) do |f| %>
+  <div class="field">
+    <%= f.label :quantity_from %><br>
+    <%= f.text_field :quantity_from %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity_to %><br>
+    <%= f.text_field :quantity_to %>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <%= f.collection_select :layerthickness_id, Layerthickness.all, :id, :thickness %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :price_per_unit_sq_cm %><br>
+    <%= f.text_field :price_per_unit_sq_cm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<center>
+<h1>Layers</h1>
+  <%= link_to 'Add Layer', new_layer_path %>
+</center>
+<div class="container" id="home-container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Layercount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @layers.each do |layer| %>
+      <tr>
+        <td><%= layer.layercount %></td>
+        <td><%= link_to 'Show', layer %></td>
+        <td><%= link_to 'Edit', edit_layer_path(layer) %></td>
+        <td><%= link_to 'Destroy', layer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+

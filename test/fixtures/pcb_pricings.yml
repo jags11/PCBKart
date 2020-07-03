@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity_from: 1.5
+  quantity_to: 1.5
+  price_per_unit_sq_cm: 1.5
+
+two:
+  quantity_from: 1.5
+  quantity_to: 1.5
+  price_per_unit_sq_cm: 1.5

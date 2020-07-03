@@ -1,0 +1,28 @@
+
+<p>
+  <strong>Pcb price:</strong>
+  <%= @order.pcb_price %>
+</p>
+
+<p>
+  <strong>Shipment charge:</strong>
+  <%= @order.shipment_charge %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @order.tax %>
+</p>
+
+<p>
+  <strong>Total price:</strong>
+  <%= @order.total_price %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

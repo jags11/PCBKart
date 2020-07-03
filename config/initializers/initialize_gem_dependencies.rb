@@ -1,0 +1,15 @@
+require 'authlogic'
+require 'bcrypt'
+require 'byebug'
+require 'redis'
+require 'redis-namespace'
+require 'redis-queue'
+require 'sidekiq'
+require 'elasticsearch/model'
+require 'elasticsearch/rails'
+require 'will_paginate'
+require 'will_paginate/array'
+require 'will_paginate/collection'
+require 'pagy'
+
+

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<center>
+<h1>Pcb Pricings</h1>
+  <%= link_to 'Create a new one', new_pcb_pricing_path %>
+
+</center>
+<div class="container" id="home-container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Quantity from</th>
+      <th>Quantity to</th>
+      <th>Price per unit sq cm</th>
+      <th>Layer count</th>
+      <th>Thickness</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pcb_pricings.each do |pcb_pricing| %>
+      <tr>
+        <td><%= pcb_pricing.quantity_from %></td>
+        <td><%= pcb_pricing.quantity_to %></td>
+        <td><%= pcb_pricing.price_per_unit_sq_cm %></td>
+        <td><%= pcb_pricing.layerthickness.layer.layercount %></td>
+        <td><%= pcb_pricing.layerthickness.thickness %></td>
+
+        <td><%= link_to 'Show', pcb_pricing %></td>
+        <td><%= link_to 'Edit', edit_pcb_pricing_path(pcb_pricing) %></td>
+        <td><%= link_to 'Destroy', pcb_pricing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<center>
+<h1>Listing User addresses</h1>
+  <%= link_to 'Add User Address', new_useraddress_path %>
+</center>
+<div class="container" id="home-container2">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>City</th>
+      <th>Pincode</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @useraddresses.each do |useraddress| %>
+      <tr>
+        <td><%= useraddress.address %></td>
+        <td><%= useraddress.city %></td>
+        <td><%= useraddress.pincode %></td>
+        <td><%= link_to 'Show', useraddress %></td>
+        <td><%= link_to 'Edit', edit_useraddress_path(useraddress) %></td>
+        <td><%= link_to 'Destroy', useraddress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+

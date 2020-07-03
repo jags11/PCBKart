@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<center>
+<h1>Layer thicknesses</h1>
+  <%= link_to 'Add Layer thickness', new_layerthickness_path %>
+
+</center>
+<div class="container" id="home-container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Thickness(in cm)</th>
+      <th>Layer count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @layerthicknesses.each do |layerthickness| %>
+      <tr>
+        <td><%= layerthickness.thickness %></td>
+        <td><%= layerthickness.layer.layercount %></td>
+        <td><%= link_to 'Show', layerthickness %></td>
+        <td><%= link_to 'Edit', edit_layerthickness_path(layerthickness) %></td>
+        <td><%= link_to 'Destroy', layerthickness, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+

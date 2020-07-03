@@ -1,0 +1,13 @@
+
+<div class="container" id="home-container">
+  <div class="jumbotron text-center text-white">
+    <h1 class="display-4">PCB Kart</h1>
+    <p class="lead">PCBs for all purpose</p>
+    <hr class="my-4">
+    <p>A simple shopping kart for Printed Circuit Boards at low cost.</p>
+    <% if logged_in? %>
+    <% else %>
+      <%= link_to "Sign up!", signup_path, class: "btn btn-success btn-lg" %>
+    <% end %>
+  </div>
+</div>

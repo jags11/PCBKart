@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quantity from:</strong>
+  <%= @pcb_pricing.quantity_from %>
+</p>
+
+<p>
+  <strong>Quantity to:</strong>
+  <%= @pcb_pricing.quantity_to %>
+</p>
+
+<p>
+  <strong>Price per unit sq cm:</strong>
+  <%= @pcb_pricing.price_per_unit_sq_cm %>
+</p>
+
+<%= link_to 'Edit', edit_pcb_pricing_path(@pcb_pricing) %> |
+<%= link_to 'Back', pcb_pricings_path %>

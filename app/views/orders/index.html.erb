@@ -1,0 +1,45 @@
+<center>
+<h1>Listing Orders</h1>
+  <%= link_to 'New Order', new_order_path %>
+</center>
+<div class="container" id="home-container1">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Order#</th>
+      <th>Pcb price</th>
+      <th>Shipment charge</th>
+      <th>Tax</th>
+      <th>Total price</th>
+      <th>Status</th>
+      <th>Created By</th>
+      <th>Created At</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.id %></td>
+        <td><%= order.pcb_price %></td>
+        <td><%= order.shipment_charge %></td>
+        <td><%= order.tax %></td>
+        <td><%= order.total_price %></td>
+        <td><%= order.status %></td>
+        <td><%= order.user.email %></td>
+        <td><%= order.created_at %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <center>
+    <%== pagy_nav_bootstrap(@pagy).html_safe %>
+  </center>
+</div>
+
+
+

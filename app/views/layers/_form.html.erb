@@ -1,0 +1,10 @@
+
+<%= form_for(@layer) do |f| %>
+  <div class="form-group">
+    <%= f.label :layercount %><br>
+    <%= f.number_field :layercount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
